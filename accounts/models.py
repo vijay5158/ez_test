@@ -16,7 +16,7 @@ class CustomUser(AbstractUser):
     signup_token = models.CharField(max_length=255, blank=True, null=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = ['mobile', 'name']
+    REQUIRED_FIELDS = ['mobile', 'first_name', 'last_name']
 
     objects = CustomUserManager()
 
